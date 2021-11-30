@@ -1,0 +1,14 @@
+<div class="container">
+    <form action="/balanceador" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <label>Ingresa el texto que desea evaluar</label>
+        <input type="input" class="form-control" name="search">
+    </div>
+    <button type="submit" class="btn btn-primary">Evaluar</button>
+    </form>
+
+    <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+    <%end%>
+</div>
