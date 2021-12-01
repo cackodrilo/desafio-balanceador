@@ -48,7 +48,7 @@ end
 
 group :production do
   # Adds support for Capybara system testing and selenium driver
-  gem 'pg', '0.18'
+  gem 'pg', '0.18.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
