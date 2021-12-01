@@ -2,18 +2,18 @@
     <h1>Balanceador de paréntesis</h1>
 </div>
 <div class="container mt-5">
-    <form action="/balanceador" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-        <label>Ingrese el texto que desea evaluar</label>
-        <input type="input" class="form-control" name="search" style="width: 300px;">
-    </div>
-    <button type="submit" class="btn btn-dark">Evaluar</button>
+    <form action="/balanceador" method="post" enctype="multipart/form-data" class="text-center">
+        <div class="form-group">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+            <label>Ingrese el texto que desea evaluar</label>
+            <input type="input" class="form-control" name="search" style="width: 400px;margin-left: 32%;">
+        </div>
+        <button type="submit" class="btn btn-dark"><strong>Evaluar</strong></button>
     </form>
 
     <% if alert %>
-    <div class="text-center mt-3">
-        <p class="alert alert-info"><strong><%= alert %></strong></p>
-    </div>
+        <div class="text-center mt-3">
+            <p class="alert alert-info"><strong><%= alert %></strong></p>
+        </div>
     <%end%>
 </div>
