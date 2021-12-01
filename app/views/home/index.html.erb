@@ -1,14 +1,19 @@
-<div class="container">
+<div class="text-center mt-3">
+    <h1>Balanceador de paréntesis</h1>
+</div>
+<div class="container mt-5">
     <form action="/balanceador" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-        <label>Ingresa el texto que desea evaluar</label>
-        <input type="input" class="form-control" name="search">
+        <label>Ingrese el texto que desea evaluar</label>
+        <input type="input" class="form-control" name="search" style="width: 300px;">
     </div>
-    <button type="submit" class="btn btn-primary">Evaluar</button>
+    <button type="submit" class="btn btn-dark">Evaluar</button>
     </form>
 
     <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
+    <div class="text-center mt-3">
+        <p class="alert alert-info"><strong><%= alert %></strong></p>
+    </div>
     <%end%>
 </div>
